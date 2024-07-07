@@ -15,13 +15,13 @@ RUN apk del git vim wget  && rm -rf resume
 
 EXPOSE 85
 
-# Using Alpine linux for lightweight container
+# Using Debian linux wich is the flavor use for lightweight container
 
 FROM httpd 
 
 RUN apt update
 
-RUN apk install git vim wget -y
+RUN apt install git vim wget -y
 
 RUN git clone https://github.com/kserge2001/resume.git
 
