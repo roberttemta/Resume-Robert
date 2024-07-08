@@ -25,7 +25,7 @@ RUN apt install git vim wget -y
 
 RUN git clone https://github.com/roberttemta/Resume-Robert.git
 
-RUN cp -r Resume-Robert/* htdocs/ 
+COPY Resume-Robert/* htdocs/ 
 
 RUN apt remove git vim wget  && rm -rf resume
 
